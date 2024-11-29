@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%include 'admin_header.html'%}
+
+    <center>
+
+    <br><br><br><br>
+    <table  border="2" class="table table-striped">
+        <tr>
+
+            <th>Sl.no</th>
+            <th>Hospital Name</th>
+            <th>Place</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Location</th>
+
+        </tr>
+
+        {%for i in  data['hospital']%}
+
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{i['hospital_name']}}</td>
+            <td>{{i['place']}}</td>
+            <td>{{i['email']}}</td>
+            <td>{{i['phone']}}</td>
+            <td><a class="btn btn-outline-dark" href="http://www.google.com/maps?q={{i['latitude'] }},{{ i['longitude'] }}">Location</a></td>
+
+            {% if i['user_type'] == 'pending' %}
+
+            <td><a href="?action=accept&id={{i['login_id']}}" class="btn btn-success">Accept</a>
+            <a href="?action=reject&id={{i['login_id']}}" class="btn btn-danger">Reject</a></td>
+
+            {%else%}
+
+            <td>      
+            <a href="?action=reject&id={{i['login_id']}}" class="btn btn-danger">Reject</a></td>
+
+            </td>
+
+
+
+            {%endif%}
+
+        </tr>
+
+        {%endfor%}
+    </table>
+</center>
+
+<br><br><br><br><br><br><br><br><br>
+    {%include 'footer.html'%}
+    
+    
+</body>
+</html>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_register">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="353dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/sign_up" />
+
+
+    <LinearLayout
+        android:layout_width="396dp"
+        android:layout_height="584dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="First Name"
+            android:inputType="text"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/editTextText4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Place"
+            android:inputType="text"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Email "
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/editTextText5"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Age"
+            android:inputType="text"
+            android:textColorHint="@color/black" />
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="-48dp"
+                android:text="Female"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editTextText6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="User Name"
+            android:inputType="text"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/editTextText7"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textWebPassword"
+            android:textColorHint="@color/black" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/sinupbutton"
+            android:text="Register" />
+    </LinearLayout>
+
+
+</LinearLayout>

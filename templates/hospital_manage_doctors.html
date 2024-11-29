@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%include 'hospital_header.html'%}
+
+
+    <center>
+
+    {%if data['up']%}
+
+    <form action="" method="post">
+        <table>
+
+            <tr>
+                <th style="font-size: 25px;">Department</th>
+                <td><select name="dep">
+                    {%for i in data['department']%}
+
+                    <option value="{{i['department_id']}}">{{i['department_name']}}</option>
+
+                    {%endfor%}
+
+                </select></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px;">First Name</th>
+                <td><input type="text" name="fname" value="{{data['up'][0]['first_name']}}"  class="form-control" style="margin-top: 25px;"></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">Last name</th>
+                <td><input type="text" name="lname"  value="{{data['up'][0]['last_name']}}"class="form-control" style="margin-top: 25px;" ></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px;">Place</th>
+                <td><input type="text" name="place" value="{{data['up'][0]['place']}}"class="form-control" style="margin-top: 25px;" ></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px;">Phone</th>
+                <td><input type="text" name="phone"  value="{{data['up'][0]['phone']}}" class="form-control" style="margin-top: 25px;" ></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">Email</th>
+                <td><input type="email" name="mail"   value="{{data['up'][0]['email']}}" class="form-control" style="margin-top: 25px;"></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">Qualification</th>
+                <td><input type="text" name="qual" value="{{data['up'][0]['qualification']}}" class="form-control" style="margin-top: 25px;" ></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" name="up" class="btn btn-danger"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+<br><br><br>
+    {%else%}
+
+
+    <br><br><br><br>
+    <center>
+    <form action="" method="post">
+        <table>
+
+        
+            <tr>
+                <th style="font-size: 25px;">First Name:</th>
+                <td><input type="text" name="fname" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">Last name</th>
+                <td><input type="text" name="lname" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px;">Place</th>
+                <td><input type="text" name="place" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px;">Phone</th>
+                <td><input type="text" name="phone" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">Email</th>
+                <td><input type="email" name="mail" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">Qualification</th>
+                <td><input type="text" name="qual" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+
+            <tr>
+                <th style="font-size: 25px;">User Name</th>
+                <td><input type="text" name="uname" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px;">Password</th>
+                <td><input type="password" name="pwd" class="form-control" style="margin-top: 25px;" required=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="add" class="btn btn-danger"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+    
+<br><br><br><br>
+
+    <table border="2" class="table table-info">
+        <tr>
+            <th>Sl.no</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Place</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Qualification</th>
+            <th></th>
+        </tr>
+
+        {%for i in data['doctors']%}
+        <tr>
+
+            <td>{{loop.index}}</td>
+            <td>{{i['first_name']}}</td>
+            <td>{{i['last_name']}}</td>
+            <td>{{i['place']}}</td>
+            <td>{{i['phone']}}</td>
+            <td>{{i['email']}}</td>
+            <td>{{i['qualification']}}</td>
+
+            <td><a href="?action=update&id={{i['login_id']}}" class="btn btn-success">Update</a>
+            <a href="?action=delete&id={{i['login_id']}}" class="btn  btn-danger">Delete</a>
+            <a href="/hospital_add_doctors_schedule?id={{i['doctors_id']}}" class="btn btn-outline-dark">Schedule Time</a></td>
+
+
+        </tr>
+        {%endfor%}
+
+    </table>
+
+    {%endif%}
+
+    {%include 'footer.html'%}
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Add_Review">
+
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="350dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Add Review....."
+        android:inputType="text"
+        android:textColorHint="@color/black" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button10"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/sinupbutton"
+        android:text="ADD" />
+
+
+</LinearLayout>

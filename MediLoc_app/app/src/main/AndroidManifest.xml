@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/main_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/main_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MediLoc"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Custom_view_doctors"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_view_departmnets"
+            android:exported="false" />
+        <activity
+            android:name=".Chat_bot"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Review"
+            android:exported="false" />
+        <activity
+            android:name=".View_prescription"
+            android:exported="false" />
+        <activity
+            android:name=".User_view_appointment"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".Make_Appointment"
+            android:exported="false" />
+        <activity
+            android:name=".View_doctors"
+            android:exported="false" />
+        <activity
+            android:name=".View_hospital_Departmnets"
+            android:exported="false" />
+        <activity
+            android:name=".View_Hospitals"
+            android:exported="false" />
+        <activity
+            android:name=".Send_Complaints"
+            android:exported="false" />
+        <activity
+            android:name=".Send_enquiry"
+            android:exported="false" />
+        <activity
+            android:name=".User_home"
+            android:exported="false" />
+        <activity
+            android:name=".User_register"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IpSetting"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".LocationService" />
+    </application>
+
+</manifest>

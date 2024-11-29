@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_home"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="363dp"
+        android:layout_height="392dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/main_login"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="195dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="-25dp"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="#4c8479"
+            android:textSize="35dp"
+            tools:layout_editor_absoluteX="215dp"
+            tools:layout_editor_absoluteY="74dp" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/username_passsword"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="User Name"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:padding="11dp"
+            android:textColorHint="@color/white"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/password_edit_text"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="11dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="321dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/login_btn_loginpage"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/button4"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Back to Home"
+            android:textColor="#4c8479"
+            android:textSize="18dp" />
+
+        />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

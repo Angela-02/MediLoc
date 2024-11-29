@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%include 'doctor_header.html'%}
+
+<br><br><br>
+
+<center>
+    <table border="2"  class="table table-info" style="width: 1500px;">
+        <tr>
+            <th>Sl.no</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+        {%for i in data['view']%}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{i['amount']}}</td>
+            <td>{{i['status']}}</td>
+            <td>{{i['date']}}</td>
+            <td><a href="/doctor_add_prescription?id={{i['appointment_id']}}" class="btn btn-success">Add Prescription</a></td>
+        </tr>
+
+        {%endfor%}
+    </table>
+</center>
+
+<br><br><br><br><br><br><br>
+    {%include 'footer.html'%}
+
+</body>
+</html>

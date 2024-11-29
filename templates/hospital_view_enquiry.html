@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%include 'hospital_header.html'%}
+
+    <br><br><br><br>
+    <center>
+    <table border="2" class="table table-striped" style="width: 1700px;">
+        <tr>
+
+            <th>Sl.No</th>
+            <th>Enquiry</th>
+            <th>Reply</th>
+            <th></th>
+        </tr>
+
+        {%for i in data['enquiry']%}
+
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{i['enquiry']}}</td>
+            <td>{{i['reply']}}</td>
+            <td><a href="/hospital_send_reply?id={{i['enquiry_id']}}" class="btn  btn-success">Send Reply</a></td>
+        </tr>
+
+        {%endfor%}
+
+    </table>
+</center>
+
+<br><br><br><br>
+
+    {%include 'footer.html'%}
+    
+</body>
+</html>

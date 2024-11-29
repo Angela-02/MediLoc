@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%include 'hospital_header.html'%}
+
+    <br><br><br><br>
+
+    <center>
+    <table border="2" class="table table-primary" style="width: 1500px;">
+        <tr>
+            <th>Sl.no</th>
+            <th>Doctor Name</th>
+            <th>Review</th>
+            <th>Date</th>
+        </tr>
+        
+        {%for i in data['view']%}
+
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{i['first_name']}} {{i['last_name']}}</td>
+            <td>{{i['review']}}</td>
+            <td>{{i['date']}}</td>
+        </tr>
+
+
+        {%endfor%}
+
+
+    </table>
+</center>
+
+<br><br><br>
+    {%include 'footer.html'%}
+    
+</body>
+</html>

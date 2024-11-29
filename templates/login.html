@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%include 'public_header.html'%}
+
+    <br><br><br><br><br><br>
+<center>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th style="font-size: 25px; color: black;">USER NAME:</th>
+                <td><input type="text" name="uname" class="form-control" ></td>
+            </tr>
+            <tr>
+                <th style="font-size: 25px; color: black;" >PASSWORD:</th>
+                <td ><input type="password" name="pwd"  class="form-control" style="margin-top: 25px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="login" style="margin-top: 25px;" class="btn btn-danger"></td>
+            </tr>
+        </table>
+    </form>
+
+</center>
+
+<br><br><br><br><br><br>
+
+    {%include 'footer.html'%}
+
+</body>
+</html>

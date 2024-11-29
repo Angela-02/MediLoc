@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/payment_new"
+    tools:context=".Payment">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="#000"
+        android:text=" PAYMENT"
+        android:layout_marginTop="-70dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/card" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_lock_idle_lock" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:hint="CARD NUMBER"
+                    android:inputType="number"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@android:drawable/ic_dialog_dialer" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="231dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="CVV"
+                    android:inputType="number"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_today" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="EXPIRY DATE(MM/YYYY)"
+                    android:inputType="date"
+                    android:focusableInTouchMode="false"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="48dp"
+                android:ems="10"
+                android:drawableLeft="@drawable/ic_baseline_currency_rupee_24"
+                android:hint="ENTER THE AMOUNT "
+                android:inputType="number"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button1"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#D81CD825"
+                android:text="PAY"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
